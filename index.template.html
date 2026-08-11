@@ -38,10 +38,20 @@ a{color:inherit; text-decoration:none;}
   border-radius:28px; padding:30px 26px 28px;
   box-shadow:12px 12px 0 var(--sage-light);
 }
-.mark{width:60px; height:60px; display:block;}
+.lockup{display:flex; align-items:center; gap:12px;}
+.mark{width:58px; height:58px; display:block; flex:none;}
+.wordmark{display:flex; flex-direction:column; gap:8px; padding-top:1px;}
+.wm-main{
+  font-size:21px; font-weight:600; letter-spacing:0.16em;
+  text-transform:uppercase; color:var(--cream); line-height:1;
+}
+.wm-sub{
+  font-family:'JBMono',ui-monospace,monospace; font-size:8px; font-weight:500;
+  letter-spacing:0.58em; text-transform:uppercase; color:var(--sage-light); line-height:1;
+}
 .name{
-  font-size:38px; font-weight:600; letter-spacing:-0.025em; line-height:1.05;
-  margin:22px 0 0;
+  font-size:37px; font-weight:600; letter-spacing:-0.025em; line-height:1.05;
+  margin:26px 0 0;
 }
 .role{
   font-family:'JBMono',ui-monospace,monospace; font-size:11.5px; font-weight:500;
@@ -80,6 +90,11 @@ a{color:inherit; text-decoration:none;}
 .item{padding:15px 0; border-top:1px solid var(--rule);}
 .item h3{font-size:17px; font-weight:600; letter-spacing:-0.015em; margin:0 0 3px;}
 .item p{font-size:15px; line-height:1.45; color:var(--muted); margin:0;}
+
+.lead{
+  font-size:16.5px; line-height:1.55; color:var(--ink); margin:0;
+  padding:0 0 2px;
+}
 
 /* ---------- proof ---------- */
 .proof{border-top:1px solid var(--rule); padding:15px 0 0; margin-top:2px;}
@@ -120,6 +135,7 @@ a{color:inherit; text-decoration:none;}
 <div class="wrap">
 
   <header class="hero">
+    <div class="lockup">
     <svg class="mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-label="Stockwell Media Co">
       <ellipse cx="50" cy="76" rx="25" ry="6" fill="none" stroke="#f4efe4" stroke-width="4.6"></ellipse>
       <ellipse cx="50" cy="76" rx="8" ry="2.5" fill="#a8c994"></ellipse>
@@ -129,9 +145,14 @@ a{color:inherit; text-decoration:none;}
       <line x1="50" y1="30" x2="61" y2="76" stroke="#a8c994" stroke-width="2.9" stroke-linecap="round"></line>
       <line x1="50" y1="30" x2="72" y2="76" stroke="#a8c994" stroke-width="2.9" stroke-linecap="round"></line>
     </svg>
+      <div class="wordmark">
+        <span class="wm-main">Stockwell</span>
+        <span class="wm-sub">Media Co</span>
+      </div>
+    </div>
 
     <h1 class="name">Stock Curtis</h1>
-    <p class="role">Founder &nbsp;·&nbsp; Stockwell Media Co</p>
+    <p class="role">Founder</p>
 
     <p class="tagline">We build the <b>systems businesses run on.</b> Dashboards, daily briefs, and internal tools for owners who want more business and less admin.</p>
   </header>
@@ -155,37 +176,42 @@ a{color:inherit; text-decoration:none;}
 
   <div class="item">
     <h3>Dashboards</h3>
-    <p>Sales, labor, inventory, and calendar on one screen, updating itself. No more pulling reports.</p>
-  </div>
-  <div class="item">
-    <h3>Daily briefs</h3>
-    <p>A text every morning with what happened yesterday and what needs you today. Built from your email, calendar, and numbers.</p>
+    <p>Sales, labor, inventory, and calendar on one screen. No more pulling reports.</p>
   </div>
   <div class="item">
     <h3>Internal tools</h3>
-    <p>The spreadsheet everyone hates, rebuilt as software that does the math and the ordering for you.</p>
+    <p>The spreadsheet everyone hates, rebuilt as software that does the math for you.</p>
+  </div>
+  <div class="item">
+    <h3>Daily briefs</h3>
+    <p>A text every morning with what happened yesterday and what needs done today. Built from your email, calendar, and numbers.</p>
   </div>
   <div class="item">
     <h3>Websites</h3>
     <p>Sites that actually do something, connected to the systems behind them.</p>
   </div>
+
+  <p class="eyebrow">In the trades</p>
+
+  <p class="lead">If you run a trades company, I build custom tools around how you already work. It turns a business that has never been technical into one that runs like a machine.</p>
+
   <p class="eyebrow">Running right now</p>
 
   <div class="proof">
     <p class="who">Cookie franchise</p>
-    <p>Bake planning, ordering, and sales forecasting in one tool. A weekly plan that used to take an hour takes about a minute.</p>
+    <p>Ordering, staffing, and sales forecasting in one tool.</p>
   </div>
   <div class="proof">
     <p class="who">Recovery club</p>
-    <p>Twice daily KPI digest texted to the leadership team, pulled straight from the CRM and the booking calendar.</p>
+    <p>Client acquisition, social media management, and the tech side of the business.</p>
   </div>
   <div class="proof">
     <p class="who">Staffing office</p>
-    <p>Weekday performance dashboard for two offices with a branded PDF the owner can hand to anyone.</p>
+    <p>One dashboard across multiple offices, so the owners can actually read their stores and pull a report in one click.</p>
   </div>
   <div class="note">
-    <p>I also own and operate a Crumbl Cookies franchise.</p>
-    <p>Everything I build gets run in my own store first. If it does not hold up on a Saturday rush, it does not ship to you.</p>
+    <p>I also own and operate a Crumbl Cookies franchise here locally.</p>
+    <p>Everything I build gets run in my own store first. If it does not hold up in a real scenario, it never gets pushed forward.</p>
   </div>
   <footer class="foot">
     <a class="line" href="mailto:stockwellmediaco@gmail.com">stockwellmediaco@gmail.com</a>
