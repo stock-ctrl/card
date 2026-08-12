@@ -10,25 +10,10 @@ for token, font in (("__JOST_B64__", "jost.woff2"), ("__MONO_B64__", "mono.woff2
 VARIANT_CSS = """
 /* ============ candidate treatments, toggled from the bar ============ */
 
-/* A. trades pitch on a forest ground */
-html.vA .trades{
-  background:var(--forest); border-radius:20px;
-  padding:24px 22px 26px; margin:44px 0 0;
-}
-html.vA .trades .eyebrow{color:var(--sage-light); margin:0 0 13px;}
-html.vA .trades .lead{color:var(--cream);}
-
 /* B. crumbl block on a forest ground */
 html.vB .note{background:var(--forest); border-color:var(--forest); border-left-color:var(--sage-light);}
 html.vB .note p{color:var(--cream);}
 html.vB .note p + p{color:var(--on-forest-muted);}
-
-/* C. sunken warm band behind the proof */
-html.vC .proofs{
-  background:var(--cream-deep); border-radius:20px;
-  padding:4px 18px 14px; margin:44px -16px 0;
-}
-html.vC .proofs .eyebrow{margin:26px 0 14px;}
 
 /* D. sage rule under each heading */
 html.vD .eyebrow{position:relative; margin-bottom:24px;}
@@ -61,9 +46,7 @@ html.vD .item:first-of-type, html.vD .proof:first-of-type{border-top-color:trans
 
 BAR = """
 <div id="vbar">
-  <button data-v="vA" aria-pressed="false">Trades panel</button>
   <button data-v="vB" aria-pressed="false">Crumbl panel</button>
-  <button data-v="vC" aria-pressed="false">Sunken band</button>
   <button data-v="vD" aria-pressed="false">Sage rules</button>
   <button class="reset" aria-pressed="false">Reset</button>
 </div>
@@ -73,7 +56,7 @@ BAR = """
   document.querySelectorAll('#vbar button').forEach(function(b){
     b.addEventListener('click', function(){
       if (b.classList.contains('reset')){
-        ['vA','vB','vC','vD'].forEach(function(v){ root.classList.remove(v); });
+        ['vB','vD'].forEach(function(v){ root.classList.remove(v); });
         document.querySelectorAll('#vbar button').forEach(function(o){ o.setAttribute('aria-pressed','false'); });
         return;
       }
