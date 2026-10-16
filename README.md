@@ -1,13 +1,9 @@
 # stock-card
 
-Tap-to-open digital business card for Stock Curtis, Stockwell Media Co.
-Written to NFC cards as a URL record and opened on the other person's phone.
+The NFC business cards are written with `https://stock-ctrl.github.io/card/`.
+This repo now only forwards that address to the real card at
+**https://stockwellmedia.com/card/**, so the tags never need rewriting.
 
-- `index.template.html` is the source. `index.html` is the build with fonts inlined.
-- Rebuild after editing the template:
-
-      python3 build.py
-
-- `contact.vcf` is what the "Save my contact" button hands to their phone.
-- Phone number is not in the served HTML. The Call and Text links are assembled
-  at runtime and the number itself only ships inside `contact.vcf`.
+- The card itself lives in `stock-ctrl/stockwellmedia-site` under `card/`.
+  Edit it there.
+- `flipper/` is the tooling for writing the NFC tags with the Flipper Zero.
