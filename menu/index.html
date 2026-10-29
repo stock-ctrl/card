@@ -5,10 +5,29 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Menu · Crumbl North Springfield</title>
-<style>html,body{margin:0;background:#fff}img{display:block;width:100%;max-width:520px;margin:0 auto;height:auto}</style>
+<style>
+html,body{margin:0;background:#fff;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;color:#111}
+.menu{display:block;width:100%;max-width:520px;margin:0 auto;height:auto}
+.cookies{max-width:520px;margin:0 auto;padding:8px 16px 28px;box-sizing:border-box}
+.cookies h2{margin:0 0 12px;font-size:20px;font-weight:800;text-align:center}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid figure{margin:0;text-align:center}
+.grid img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;background:#fff8f9;border-radius:16px}
+.grid figcaption{margin-top:6px;font-size:15px;font-weight:700;line-height:1.25}
+</style>
 </head>
 <body>
-<!-- Event menu for NFC taps. To reuse at the next event, swap menu.png; the tag URL never changes. -->
-<img src="menu.png" alt="Crumbl menu. Flavors: Chocolate Chip (egg, milk, wheat, soy), Halloween Red Velvet (egg, milk, wheat, soy), Halloween Sprinkle Cake (egg, milk, wheat), Dirt Cake (egg, milk, wheat). Sizes: Single $7.00, 4-Pack $25.00, 6-Pack $35.00. Card only.">
+<!-- Event menu for NFC taps. To reuse at the next event, swap menu.png and the photos below; the tag URL never changes.
+     Photos are this week's lineup images from the cookie estimator (crumbl_cookie_components.image). -->
+<img class="menu" src="menu.png" alt="Crumbl menu. Flavors: Chocolate Chip (egg, milk, wheat, soy), Halloween Red Velvet (egg, milk, wheat, soy), Halloween Sprinkle Cake (egg, milk, wheat), Dirt Cake (egg, milk, wheat). Sizes: Single $7.00, 4-Pack $25.00, 6-Pack $35.00. Card only.">
+<section class="cookies">
+  <h2>Tonight's cookies</h2>
+  <div class="grid">
+    <figure><img src="photos/chocolate-chip.png" alt="Chocolate Chip cookie"><figcaption>Chocolate Chip</figcaption></figure>
+    <figure><img src="photos/red-velvet.png" alt="Halloween Red Velvet cookie"><figcaption>Halloween Red Velvet</figcaption></figure>
+    <figure><img src="photos/sprinkle-cake.png" alt="Halloween Sprinkle Cake cookie"><figcaption>Halloween Sprinkle Cake</figcaption></figure>
+    <figure><img src="photos/dirt-cake.png" alt="Dirt Cake cookie"><figcaption>Dirt Cake</figcaption></figure>
+  </div>
+</section>
 </body>
 </html>
